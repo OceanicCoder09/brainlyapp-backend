@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-mongoose.connect("mongodb://localhost:27017/brainly", {
+mongoose.connect("mongodb+srv://sarthak:sarthak@brainly-cluster.u64fman.mongodb.net/?retryWrites=true&w=majority&appName=Brainly-Cluster", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
