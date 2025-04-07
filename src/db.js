@@ -20,5 +20,11 @@ const ContentSchema = new Schema({
     userId: { type: mongoose.Types.ObjectId, ref: 'User', required: true }
 });
 
+const LinkSchema = new Schema({
+    hash: { type: String, unique: true, required: true },
+    userId: { type: mongoose.Types.ObjectId, ref: 'User', required: true }
+});
+
+export const LinkModel = mongoose.model("Links", LinkSchema)
 export const ContentModel = mongoose.model("Content", ContentSchema);
 export const UserModel = mongoose.model("User", UserSchema);
